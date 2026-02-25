@@ -1,0 +1,74 @@
+@php
+$sectionClass = '';
+$sectionClass .= $nomt ? ' !mt-0' : '';
+@endphp
+
+<!-- hero --->
+
+<section
+	data-gsap-anim="section"
+	@if(!empty($section_id)) id="{{ $section_id }}" @endif
+	class="b-hero relative {{ $sectionClass }} {{ $section_class }}">
+
+	<div class="__wrapper c-main relative z-20">
+		<div class="__col grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-20 mt-30 md:mt-0 ">
+
+			<div class="__hero order2 lg:py-10">
+				<h1 data-gsap-element="header" class="">{{ $g_hero['title'] }}</h1>
+
+				<div data-gsap-element="txt" class="__txt mt-4">
+					{!! $g_hero['txt'] !!}
+				</div>
+
+				@if (!empty($g_hero['hint']))
+				<div data-gsap-element="box" class="__hint flex items-center radius bg-primary-lighter border border-dashed border-primary p-6 gap-4 mt-6">
+					@if (!empty($g_hero['image_hint']['url']))
+					<img
+						class="max-w-10 aspect-square"
+						src="{{ $g_hero['image_hint']['url'] }}"
+						alt="{{ $g_hero['image_hint']['alt'] ?? '' }}">
+					@endif
+
+					@if (!empty($g_hero['header_hint']))
+					<div class="">
+						{{ $g_hero['header_hint'] }}
+					</div>
+					@endif
+				</div>
+				@endif
+
+				<div class="inline-buttons mt-6">
+					@if (!empty($g_hero['button1']))
+					<x-button
+						:href="$g_hero['button1']['url']"
+						variant="secondary"
+						class=""
+						data-gsap-element="btn">
+						{{ $g_hero['button1']['title'] }}
+					</x-button>
+					@endif
+					@if (!empty($g_hero['button2']))
+					<x-button
+						:href="$g_hero['button2']['url']"
+						variant="primary"
+						class=""
+						data-gsap-element="btn">
+						{{ $g_hero['button2']['title'] }}
+					</x-button>
+					@endif
+				</div>
+
+			</div>
+
+			@if (!empty($g_hero['image']))
+			<div data-gsap-element="img" class="__img order1">
+				<img class="object-cover rounded-3xl md:rounded-b-3xl w-full h-[320px] md:h-full" src="{{ $g_hero['image']['url'] }}" alt="{{ $g_hero['image']['alt'] ?? '' }}">
+			</div>
+			@endif
+
+		</div>
+	</div>
+
+	<img class="absolute opacity-20 top-0 left-0 -translate-x-3/4 -translate-y-2/3 pointer-events-none" src="/wp-content/uploads/2026/02/shape-2.svg" />
+
+</section>
