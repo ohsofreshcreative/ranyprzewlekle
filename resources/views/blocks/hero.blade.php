@@ -62,13 +62,17 @@ $sectionClass .= $nomt ? ' !mt-0' : '';
 
 			@if (!empty($g_hero['image']))
 			<div data-gsap-element="img" class="__img order1">
-				<img class="object-cover rounded-3xl md:rounded-b-3xl w-full h-[320px] md:h-full" src="{{ $g_hero['image']['url'] }}" alt="{{ $g_hero['image']['alt'] ?? '' }}">
+				<img class="object-contain rounded-3xl md:rounded-b-3xl w-full h-[320px] md:h-full" src="{{ $g_hero['image']['url'] }}" alt="{{ $g_hero['image']['alt'] ?? '' }}">
 			</div>
 			@endif
 
 		</div>
 	</div>
 
-	<img class="absolute opacity-20 top-0 left-0 -translate-x-3/4 -translate-y-2/3 pointer-events-none" src="/wp-content/uploads/2026/02/shape-2.svg" />
+	<img class="absolute opacity-20 top-0 left-0 -translate-x-3/4 -translate-y-1/3 pointer-events-none" src="/wp-content/uploads/2026/02/shape.svg" />
+
+	<img class="absolute opacity-100 top-0 right-0 translate-x-2/4 -translate-y-1/3 pointer-events-none" src="/wp-content/uploads/2026/02/shape.svg" />
+
+	<img class="absolute opacity-20 top-0 right-0 translate-x-1/10 -translate-y-2/3 pointer-events-none" src="/wp-content/uploads/2026/02/shape.svg" />
 
 </section>

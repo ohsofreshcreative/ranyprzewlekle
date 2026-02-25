@@ -11,8 +11,8 @@
 
 	<div class="__wrapper c-main relative z-2">
 
-		<div class="relative grid grid-cols-1 lg:grid-cols-2 items-center gap-10 z-10">
-			<div class="__content w-full lg:w-11/12 flex flex-col justify-between">
+		<div class="relative grid items-center gap-10 z-10">
+			<!-- <div class="__content w-full lg:w-11/12 flex flex-col justify-between">
 				<h2 data-gsap-element="header" class="m-header">{!! $g_contact_1['header'] !!}</h2>
 				<p>{!! $g_contact_1['txt'] !!}</p>
 
@@ -25,7 +25,7 @@
 					<a data-gsap-element="txt" class="__mail flex items-center text-white w-max" href="mailto:{{ $g_contact_1['mail'] }}">{{ $g_contact_1['mail'] }}</a>
 				</div>
 			</div>
-
+ -->
 			<div data-gsap-element="form" class="">
 				<h4 class="!text-primary mb-4">{!! $g_contact_2['title'] !!}</h4>
 				{!! do_shortcode($g_contact_2['shortcode']) !!}

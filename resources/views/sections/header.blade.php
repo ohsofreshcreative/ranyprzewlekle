@@ -7,7 +7,7 @@ use App\Walkers\MegaMenuWalker;
 <header x-data="{ mobileOpen: false }" class="relative top-0 z-50 bg-white masthead fixed-top mt-4 rounded-full">
 
 	<!-- Desktop Header -->
-	<div class="items-center justify-between hidden h-full py-4 md:px-4 lg:px-12 mx-auto md:flex">
+	<div class="items-center justify-between hidden h-full py-4 md:px-4 lg:px-12 mx-auto lg:flex">
 		<a class="brand w-1/6 min-w-25" href="{{ home_url('/') }}">
 			@if ($logo)
 			<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] ?? 'Logo' }}" class="relative w-auto h-14">
@@ -20,22 +20,22 @@ use App\Walkers\MegaMenuWalker;
 			<nav class="ml-4 nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
 				{!! wp_nav_menu([
 				'theme_location' => 'primary_navigation',
-				'menu_class' => 'nav flex gap-x-2 md:gap-x-3 lg:gap-x-6 text-sm font-medium items-center',
+				'menu_class' => 'nav flex gap-x-1 md:gap-x-2 lg:gap-x-4 text-sm font-medium items-center',
 				'container' => false,
 				'echo' => false,
 				'walker' => new \App\Walkers\MegaMenuWalker(),
 				]) !!}
 			</nav>
 			@endif
-			<a class="__menu-btn bg-secondary !text-white font-normal text-sm rounded-full whitespace-nowrap py-2 px-2 lg:px-4 ml-2" href="#kontakt">Kontakt</a>
+			<a class="__menu-btn bg-primary-600 font-semibold text-sm rounded-full whitespace-nowrap py-2 px-2 lg:px-4 ml-2" href="#zarejestruj-sie">Zarejestruj się</a>
 		</div>
 	</div>
 
 	<!-- Mobile Header Bar -->
-	<div class="flex items-center justify-between p-4 mobile-menu fixed-top md:hidden gap-20">
+	<div class="flex items-center justify-between p-4 mobile-menu fixed-top lg:hidden gap-20">
 		<a class="brand" href="{{ home_url('/') }}">
 			@if ($logo)
-			<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] ?? 'Logo' }}" class="relative w-auto h-12 -top-0.5 max-w-[200px]">
+			<img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] ?? 'Logo' }}" class="relative w-auto h-10 pl-6 max-w-[200px]">
 			@else
 			<span class="text-lg font-bold">{{ $siteName }}</span>
 			@endif
@@ -71,7 +71,7 @@ use App\Walkers\MegaMenuWalker;
 		aria-label="Menu mobilne">
 		<div class="p-4 relative z-10">
 			<div class="flex items-center justify-between mb-6">
-				<span class=""><a class="brand shrink-0" href="{{ home_url('/') }}"><img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] ?? 'Logo' }}" class="w-auto max-w-[200px] h-12"></a></span>
+				<span class=""><a class="brand shrink-0" href="{{ home_url('/') }}"><img src="{{ $logo['url'] }}" alt="{{ $logo['alt'] ?? 'Logo' }}" class="w-auto max-w-[200px] invert h-12"></a></span>
 				<button
 					@click="mobileOpen = false"
 					class="p-2 text-white rounded-md">
@@ -96,8 +96,8 @@ use App\Walkers\MegaMenuWalker;
 			@endif
 
 			<div class="mt-8">
-				<a href="#kontakt" class="block w-full white-btn">
-					Kontakt
+				<a href="#zarejestruj-sie" class="__menu-btn bg-primary-600 !text-xl rounded-full whitespace-nowrap py-6 px-8 ml-2">
+					Zarejestruj się
 				</a>
 			</div>
 		</div>

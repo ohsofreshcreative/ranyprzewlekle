@@ -12,29 +12,20 @@ $sectionClass .= ' ' . $background;
 
 <!--- logos -->
 
-<section data-gsap-anim="section" @if(!empty($section_id)) id="{{ $section_id }}" @endif class="b-logos relative -smt {{ $sectionClass }} {{ $section_class }}">
+<section data-gsap-anim="section" @if(!empty($section_id)) id="{{ $section_id }}" @endif class="b-logos c-main relative -smt {{ $sectionClass }} {{ $section_class }}">
 
-	<div class="__wrapper c-main relative">
-		<h4 data-gsap-element="header" class="w-full md:w-1/2">{{ $g_logos['title'] }}</h4>
+	<div class="__wrapper relative">
+		<h3 data-gsap-element="header" class="w-full md:w-1/2">{{ $g_logos['title'] }}</h3>
 	</div>
 
 	@if (!empty($g_logos['gallery']))
-    <div class="swiper logos-swiper mt-20">
-        <div class="swiper-wrapper">
-            {{-- Pętla iteruje po $g_logos['gallery'], ponieważ galeria jest wewnątrz grupy --}}
-            @foreach ($g_logos['gallery'] as $image)
-            <div class="swiper-slide">
-                <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="h-12 w-auto">
-            </div>
-            @endforeach
-            {{-- Duplikaty slajdów dla płynnej pętli --}}
-            @foreach ($g_logos['gallery'] as $image)
-            <div class="swiper-slide">
-                <img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="h-12 w-auto">
-            </div>
-            @endforeach
-        </div>
-    </div>
-    @endif
+	<div data-gsap-element="logos" class="__logos grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+		@foreach ($g_logos['gallery'] as $image)
+		<div class="__logo relative border border-secondary-100 rounded-2xl bg-white flex items-center justify-center h-48 p-4">
+			<img src="{{ $image['url'] }}" alt="{{ $image['alt'] }}" class="h-12 w-auto">
+		</div>
+		@endforeach
+	</div>
+	@endif
 
 </section>

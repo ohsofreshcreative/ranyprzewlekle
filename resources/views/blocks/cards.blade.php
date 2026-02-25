@@ -32,12 +32,12 @@ $sectionClass .= ' ' . $background;
 
 		<div class="grid {{ $gridClass }} gap-8 mt-10">
 			@foreach ($r_cards as $item)
-			<div data-gsap-element="card" class="__card relative bg-white shadow-lg shadow-primary-800/10 radius p-10">
+			<div data-gsap-element="card" class="__card relative bg-white border border-primary radius p-10">
 				@if (!empty($item['image']['url']))
-				<img class="mb-6" src="{{ $item['image']['url'] }}" alt="{{ $item['image']['alt'] ?? '' }}" />
+				<img class="rounded-full mb-6" src="{{ $item['image']['url'] }}" alt="{{ $item['image']['alt'] ?? '' }}" />
 				@endif
 				@if (!empty($item['title']))
-				<h6 class="!text-primary text-h7 mb-4">{{ $item['title'] }}</h6>
+				<h6 class="!text-primary-600 text-h7 mb-4">{{ $item['title'] }}</h6>
 				@endif
 				@if (!empty($item['text']))
 				<p class="!text-body">{{ $item['text'] }}</p>

@@ -61,7 +61,7 @@
 
 ::selection {
 	background: var(--color-primary-400);
-	color: #fff;
+	color: #000;
 }
 
 :focus-visible {
@@ -90,15 +90,15 @@ html,
 body {
 	overflow-x: clip;
 	background-color: var(--bg);
-	color: #65594B;
+	color: #555555;
 }
 
 /*--- !ROOT ---*/
 
 :root {
-	--header: "Comfortaa", sans-serif;
-	--txt: "Comfortaa", sans-serif;
-	--btns-font: "Comfortaa", sans-serif;
+	--header: "Oswald", sans-serif;
+	--txt: "Roboto", sans-serif;
+	--btns-font: "Roboto", sans-serif;
 
 	--smt: 104px;
 	--spt: 104px;
@@ -247,6 +247,9 @@ body {
 .section-white {
 	background-color: #fff;
 	padding: var(--smt) 0;
+	.__card {
+		background-color: var(--bg) !important;
+	}
 }
 
 .section-s-light {
@@ -490,6 +493,7 @@ h6,
 	font-family: var(--header);
 	font-weight: 400;
 	color:var(--color-secondary);
+	text-transform: uppercase;
 }
 
 .big {
@@ -608,15 +612,15 @@ h6,
 }
 
 .btn-primary {
-	background-color: var(--color-primary);
-	border-color: var(--color-primary);
-	color: #fff;
+	background-color: var(--color-primary-600);
+	border-color: var(--color-primary-600);
+	color:  var(--color-secondary);
 }
 
 .btn-primary:hover {
 	background-color: var(--color-primary-hover);
 	border-color: var(--color-primary-hover);
-	color: #fff;
+	color:  var(--color-secondary);
 }
 
 .btn-secondary {
@@ -981,7 +985,7 @@ h6,
 	display: flex;
 	align-items: center;
 	color: var(--body) !important;
-	font-size: 14px;
+	font-size: 15px;
 	white-space: nowrap;
 }
 .fixed-top.scrollUp {

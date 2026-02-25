@@ -9,19 +9,19 @@ import path from 'path'
 
 export default defineConfig(({ command }) => ({
   server: {
-    host: 'ifproject.local',
+    host: 'ranyprzewlekle.local',
     port: 6100,
     strictPort: true,
     cors: true,
     hmr: {
       protocol: 'ws',
-      host: 'ifproject.local',
+      host: 'ranyprzewlekle.local',
       port: 6100,
     },
   },
 
   base: command === 'build'
-    ? '/wp-content/themes/ifproject/public/build/'
+    ? '/wp-content/themes/ranyprzewlekle/public/build/'
     : '/build/',
 
   plugins: [
