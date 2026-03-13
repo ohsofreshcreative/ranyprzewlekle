@@ -26,7 +26,7 @@ $sectionClass .= $nomt ? ' !mt-0' : '';
 					:href="$what['button']['url']"
 					variant="secondary"
 					class="mt-6"
-					data-gsap-element="btn">
+					data-gsap-element="btn" traget="_blank">
 					{{ $what['button']['title'] }}
 				</x-button>
 				@endif
