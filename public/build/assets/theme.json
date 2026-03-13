@@ -1514,6 +1514,11 @@
           "color": "rgb(var(--p-800))"
         },
         {
+          "name": "Primary (900)",
+          "slug": "primary-900",
+          "color": "rgb(var(--p-900))"
+        },
+        {
           "name": "Primary (Dark)",
           "slug": "primary-dark",
           "color": "rgb(var(--p-dark))"
