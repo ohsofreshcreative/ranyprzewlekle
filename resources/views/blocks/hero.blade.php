@@ -58,6 +58,8 @@ $sectionClass .= $nomt ? ' !mt-0' : '';
 					@endif
 				</div>
 
+				<a target="_blank" href="/wp-content/uploads/2026/03/POLMEDTECH_Certyfikat_2996.pdf"><img src="/wp-content/uploads/2026/03/polmed.jpg"/></a>
+
 			</div>
 
 			@if (!empty($g_hero['image']))
