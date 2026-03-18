@@ -58,7 +58,7 @@ $sectionClass .= $nomt ? ' !mt-0' : '';
 					@endif
 				</div>
 
-				<a target="_blank" class="mt-6" href="/wp-content/uploads/2026/03/POLMEDTECH_Certyfikat_2996.pdf"><img class="w-[240px] rounded-full" src="/wp-content/uploads/2026/03/polmed.jpg"/></a>
+				<a data-gsap-element="polmed" target="_blank" class="block mt-10" href="/wp-content/uploads/2026/03/POLMEDTECH_Certyfikat_2996.pdf"><img class="w-[240px] rounded-full" src="/wp-content/uploads/2026/03/polmed.jpg"/></a>
 
 			</div>
 
