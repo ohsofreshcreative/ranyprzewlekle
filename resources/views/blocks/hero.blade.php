@@ -8,7 +8,7 @@ $sectionClass .= $nomt ? ' !mt-0' : '';
 <section
     data-gsap-anim="section"
     @if(!empty($section_id)) id="{{ $section_id }}" @endif
-    class="b-hero relative bg-cover bg-center overflow-hidden {{ $sectionClass }} {{ $section_class }}"
+    class="b-hero relative bg-cover bg-right overflow-hidden {{ $sectionClass }} {{ $section_class }}"
     @if (!empty($g_hero['image']['url'])) style="background-image: url('{{ $g_hero['image']['url'] }}')" @endif>
 
     <div class="absolute inset-0 bg-gradient-to-r from-white to-transparent"></div>
